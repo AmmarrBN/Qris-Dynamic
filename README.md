@@ -1,13 +1,17 @@
 # QRIS Dynamic Generator 🚀
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/yukis-projects-11c0a24b/v0-dynamic-qris-generator)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/B1dAckC44gC)
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
 Aplikasi web modern untuk mengkonversi QRIS statis menjadi QRIS dinamis dengan nominal pembayaran yang dapat disesuaikan. Dilengkapi dengan dark/light mode, animasi smooth, dan logo branding otomatis pada QR code.
 
-![QRIS Dynamic Generator Preview](https://via.placeholder.com/800x400/1a1a2e/ffffff?text=QRIS+Dynamic+Generator)
+<p align="center">
+  <a href="https://qris.ammarbn.my.id">
+    <img src="https://raw.githubusercontent.com/AmmarrBN/Qris-Dynamic/refs/heads/main/public/yuki-host-logo.png" 
+         alt="QRIS Dynamic Generator Preview" 
+         width="70%" />
+  </a>
+</p>
 
 ## 📋 Daftar Isi
 
@@ -482,4 +486,5 @@ Jika ada pertanyaan atau issue, silakan:
 **⭐ Jika project ini membantu, jangan lupa kasih star di GitHub!**
 
 Made with ❤️ by [AmmarBN](https://github.com/AmmarrBN)
+
 
