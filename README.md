@@ -14,7 +14,7 @@ Aplikasi web modern untuk mengkonversi QRIS statis menjadi QRIS dinamis dengan n
 - [Apa itu QRIS Dynamic?](#-apa-itu-qris-dynamic)
 - [Fitur Utama](#-fitur-utama)
 - [Kegunaan](#-kegunaan)
-- [Manfaat](#manfaat)
+- [Manfaat](#-manfaat)
 - [Teknologi](#-teknologi)
 - [Penjelasan Code Utama](#-penjelasan-code-utama)
 - [Instalasi Lokal](#-instalasi-lokal)
