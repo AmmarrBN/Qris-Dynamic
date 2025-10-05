@@ -479,13 +479,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Jika ada pertanyaan atau issue, silakan:
 - Open issue di GitHub
-- Contact via email: [ammarburhanudinafis.com]
+- Contact via email: [ammarburhanudinafis@gmail.com]
 
 ---
 
 **⭐ Jika project ini membantu, jangan lupa kasih star di GitHub!**
 
 Made with ❤️ by [AmmarBN](https://github.com/AmmarrBN)
+
 
 
 
