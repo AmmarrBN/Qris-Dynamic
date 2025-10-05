@@ -4,8 +4,6 @@
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/B1dAckC44gC)
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Heroku Deploy](https://img.shields.io/badge/Deployed%20on-Heroku-430098?style=for-the-badge&logo=heroku)](https://heroku.com)
 
 Aplikasi web modern untuk mengonversi **QRIS statis menjadi QRIS dinamis** dengan nominal pembayaran yang dapat disesuaikan.  
 Dilengkapi dengan dark/light mode, animasi smooth, dan logo branding otomatis pada QR code.
@@ -16,20 +14,18 @@ Dilengkapi dengan dark/light mode, animasi smooth, dan logo branding otomatis pa
 
 ## 📋 Daftar Isi
 
-- [🎯 Apa itu QRIS Dynamic?](#-apa-itu-qris-dynamic)
-- [✨ Fitur Utama](#-fitur-utama)
-- [💡 Manfaat](#-manfaat)
-- [🛠️ Teknologi](#-teknologi)
-- [📦 Instalasi Lokal](#-instalasi-lokal)
-- [🚀 Deploy ke Vercel](#-deploy-ke-vercel)
-- [🌐 Deploy ke Heroku](#-deploy-ke-heroku)
-- [🧠 Penjelasan Code Utama](#-penjelasan-code-utama)
-- [📖 Cara Penggunaan](#-cara-penggunaan)
-- [🤝 Kontribusi](#-kontribusi)
-- [📝 Lisensi](#-lisensi)
-- [👨‍💻 Author](#-author)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [📞 Support](#-support)
+- [Apa itu QRIS Dynamic?](#-apa-itu-qris-dynamic)
+- [Fitur Utama](#-fitur-utama)
+- [Kegunaan](#-kegunaan)
+- [Manfaat](#-manfaat)
+- [Teknologi](#-teknologi)
+- [Penjelasan Code Utama](#-penjelasan-code-utama)
+- [Instalasi Lokal](#-instalasi-lokal)
+- [Deploy ke Vercel](#-deploy-ke-vercel)
+- [Deploy ke Heroku](#-deploy-ke-heroku)
+- [Cara Penggunaan](#-cara-penggunaan)
+- [Kontribusi](#-kontribusi)
+- [Lisensi](#-lisensi)
 
 ---
 
@@ -37,162 +33,58 @@ Dilengkapi dengan dark/light mode, animasi smooth, dan logo branding otomatis pa
 
 **QRIS (Quick Response Code Indonesian Standard)** adalah standar QR code untuk pembayaran digital di Indonesia.
 
-- **QRIS Statis:** pelanggan harus mengetik nominal manual  
-- **QRIS Dinamis:** nominal sudah tertanam di dalam QR  
+**QRIS Statis:** QR code tanpa nominal tetap — pelanggan harus memasukkan jumlah manual.  
+**QRIS Dinamis:** QR code dengan nominal tetap — pelanggan cukup scan & bayar.
 
-Aplikasi ini:
-1. Membaca QRIS statis  
-2. Menambahkan tag nominal (54)  
+Aplikasi ini mengubah QRIS statis menjadi dinamis dengan langkah:
+1. Membaca data QRIS statis  
+2. Menambahkan informasi nominal (tag 54)  
 3. Menghitung ulang CRC16 checksum  
-4. Menghasilkan QR code baru dengan logo  
+4. Membuat ulang QR code dengan logo branding
 
 ---
 
 ## ✨ Fitur Utama
 
-- 🖼️ Upload QRIS / input manual  
-- 💰 Input nominal otomatis format Rupiah  
-- 🧾 Generate QR Code dengan logo  
-- 🌗 Dark/Light Mode  
-- 🎨 Animated Gradient Background  
-- ⬇️ Download hasil QR  
-- 📋 Copy QRIS string  
-- 📱 Fully Responsive  
-- 💎 Modern Glass UI  
+- 🖼️ **Upload QRIS Image** (atau input manual)
+- 💰 **Input Nominal Dinamis** (auto-format Rupiah)
+- 🧾 **QR Code dengan Logo**
+- 🌗 **Dark/Light Mode**
+- 🌈 **Animated Background**
+- ⬇️ **Download QR Code (PNG)**
+- 📋 **Copy QRIS String**
+- 📱 **Responsive Design**
+- 💎 **Modern UI/UX (Glassmorphism & Gradient)**
 
 ---
 
 ## 💡 Manfaat
 
-| Kelebihan | Deskripsi |
-|------------|------------|
-| ⚡ Cepat | Generate QRIS dalam detik |
-| ✅ Akurat | Nominal otomatis |
-| 💼 Profesional | QR dengan logo brand |
-| 🧠 Modern | UI/UX elegan |
-| 💸 Gratis | 100% open source |
+- ⚡ **Efisiensi waktu:** generate QRIS dinamis dalam hitungan detik  
+- ✅ **Mengurangi error:** nominal sudah ditentukan  
+- 🧠 **Profesional:** QR code dengan logo brand  
+- 🎨 **UX modern:** smooth transitions & theme toggle  
+- 💸 **Gratis & Open Source**  
+- 🔧 **Fleksibel:** untuk berbagai skenario pembayaran  
 
 ---
 
 ## 🛠️ Teknologi
 
-| Stack | Versi |
-|-------|--------|
-| Next.js | 15.2.4 |
-| React | 19 |
-| TypeScript | 5.0.2 |
-| Tailwind CSS | v4 |
-| shadcn/ui | Latest |
-| qrcode | Latest |
-| Lucide React | Latest |
+- **Next.js 15.2.4**
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **shadcn/ui**
+- **qrcode**
+- **Lucide React**
+- **Geist Font (Vercel)**
 
 ---
 
-<details>
-<summary>📦 <b>Instalasi Lokal (klik untuk membuka)</b></summary>
+## 🔍 Penjelasan Code Utama
 
-### Prerequisites
-- Node.js 18+ atau 20+
-- npm / yarn / pnpm
-
-### Langkah-langkah
-```bash
-git clone https://github.com/Hoshiyuki-Api/v0-dynamic-qris-generator.git
-cd v0-dynamic-qris-generator
-
-# install dependencies
-npm install
-
-# jalankan di mode development
-npm run dev
-````
-
-Akses di browser:
-
-```
-http://localhost:3000
-```
-
-</details>
-
----
-
-<details>
-<summary>🚀 <b>Deploy ke Vercel</b></summary>
-
-### Metode 1: via GitHub
-
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-1. Masuk ke [vercel.com](https://vercel.com)
-2. Import repo `v0-dynamic-qris-generator`
-3. Klik **Deploy**
-4. Selesai 🎉
-
-### Metode 2: via CLI
-
-```bash
-npm install -g vercel
-vercel login
-vercel
-vercel --prod
-```
-
-</details>
-
----
-
-<details>
-<summary>🌐 <b>Deploy ke Heroku</b></summary>
-
-### Langkah
-
-```bash
-heroku login
-heroku create your-app-name
-heroku buildpacks:set heroku/nodejs
-```
-
-**Procfile**
-
-```
-web: npm start
-```
-
-**package.json**
-
-```json
-{
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start -p $PORT"
-  }
-}
-```
-
-**Deploy**
-
-```bash
-git add .
-git commit -m "Deploy to Heroku"
-git push heroku main
-heroku open
-```
-
-</details>
-
----
-
-<details>
-<summary>🧠 <b>Penjelasan Code Utama</b></summary>
-
-### 🔹 CRC16 Checksum
-
+### 1. CRC16 Calculation
 ```typescript
 function crc16(data: string): string {
   let crc = 0xFFFF;
@@ -204,9 +96,9 @@ function crc16(data: string): string {
   }
   return (crc & 0xFFFF).toString(16).toUpperCase().padStart(4, '0');
 }
-```
+````
 
-### 🔹 Tambah Nominal ke QRIS
+### 2. QRIS Dynamic Conversion
 
 ```typescript
 const modifyQris = (staticQris: string, nominal: number): string => {
@@ -218,7 +110,7 @@ const modifyQris = (staticQris: string, nominal: number): string => {
 };
 ```
 
-### 🔹 Generate QR Code dengan Logo
+### 3. QR Code Generation with Logo
 
 ```typescript
 useEffect(() => {
@@ -247,7 +139,7 @@ useEffect(() => {
 }, [qrisString]);
 ```
 
-### 🔹 Toggle Tema
+### 4. Theme Toggle
 
 ```typescript
 const toggleTheme = () => {
@@ -258,50 +150,150 @@ const toggleTheme = () => {
 };
 ```
 
-</details>
-
 ---
 
-<details>
-<summary>📖 <b>Cara Penggunaan</b></summary>
+## 📦 Instalasi Lokal
 
-1. Upload QRIS statis
-2. Masukkan nominal
-3. Klik **Generate QRIS Dinamis**
-4. Download QR / copy string
-5. (Opsional) ubah tema dark/light
+### Prerequisites
 
-</details>
+* Node.js 18+ atau 20+
+* npm / yarn / pnpm
 
----
-
-<details>
-<summary>🤝 <b>Kontribusi</b></summary>
-
-### Cara berkontribusi
+### Langkah
 
 ```bash
+# Clone repository
+git clone https://github.com/Hoshiyuki-Api/v0-dynamic-qris-generator.git
+cd v0-dynamic-qris-generator
+
+# Install dependencies
+npm install
+# atau
+yarn install
+# atau
+pnpm install
+
+# Jalankan dev server
+npm run dev
+# atau
+yarn dev
+# atau
+pnpm dev
+```
+
+Buka di browser:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🚀 Deploy ke Vercel
+
+### 🔹 Method 1: Deploy via GitHub
+
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+1. Buka [vercel.com](https://vercel.com)
+2. Import repo `v0-dynamic-qris-generator`
+3. Klik **Deploy**
+4. Aplikasi live di `https://your-app.vercel.app`
+
+### 🔹 Method 2: Deploy via CLI
+
+```bash
+npm install -g vercel
+vercel login
+vercel
+vercel --prod
+```
+
+---
+
+## 🌐 Deploy ke Heroku
+
+### Langkah
+
+```bash
+# Login
+heroku login
+
+# Create app
+heroku create your-app-name
+
+# Set buildpack
+heroku buildpacks:set heroku/nodejs
+```
+
+**Procfile**
+
+```
+web: npm start
+```
+
+**package.json**
+
+```json
+{
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "lint": "next lint"
+  }
+}
+```
+
+**Deploy**
+
+```bash
+git add .
+git commit -m "Deploy to Heroku"
+git push heroku main
+heroku open
+```
+
+---
+
+## 📖 Cara Penggunaan
+
+1. Upload QRIS statis
+2. Input nominal pembayaran
+3. Klik **Generate QRIS Dinamis**
+4. Download atau copy hasil QR code
+5. (Opsional) Toggle dark/light mode
+
+---
+
+## 🤝 Kontribusi
+
+```bash
+# Fork repo
 git checkout -b feature/AmazingFeature
 git commit -m "Add AmazingFeature"
 git push origin feature/AmazingFeature
 ```
 
-Buat pull request di GitHub ✅
+Lalu buat **Pull Request**.
 
-**Ide kontribusi:**
+💡 Ide kontribusi:
 
-* Batch QR generator
-* Export SVG/PDF
-* API endpoint
-* Save QR history
-
-</details>
+* Batch generation
+* Export QR ke SVG/PDF
+* Saved QR history
+* API integration
 
 ---
 
 ## 📝 Lisensi
 
-Project ini berlisensi di bawah **MIT License** — lihat file `LICENSE` untuk detailnya.
+Distributed under the **MIT License**.
+Lihat file `LICENSE` untuk detail.
 
 ---
 
@@ -309,7 +301,6 @@ Project ini berlisensi di bawah **MIT License** — lihat file `LICENSE` untuk d
 
 **AmmarBN**
 🔗 GitHub: [@AmmarrBN](https://github.com/AmmarrBN)
-🌐 Website: [https://yuki-host.my.id](https://yuki-host.my.id)
 
 ---
 
@@ -317,25 +308,25 @@ Project ini berlisensi di bawah **MIT License** — lihat file `LICENSE` untuk d
 
 * [v0.app](https://v0.app)
 * [Next.js](https://nextjs.org/)
-* [Tailwind CSS](https://tailwindcss.com/)
-* [shadcn/ui](https://ui.shadcn.com/)
 * [Vercel](https://vercel.com/)
+* [shadcn/ui](https://ui.shadcn.com/)
+* [Tailwind CSS](https://tailwindcss.com/)
 
 ---
 
 ## 📞 Support
 
 📧 Email: [[your-email@example.com](mailto:your-email@example.com)]
-🐞 Open issue di GitHub jika menemukan bug
+🐞 Open issue di GitHub jika ada bug atau pertanyaan.
 
 ---
 
-⭐ **Kasih star kalau project ini bermanfaat ya!**
-Dibuat dengan ❤️ oleh [AmmarBN](https://github.com/AmmarrBN)
+⭐ **Jangan lupa kasih star di GitHub kalau project ini membantu!**
+Made with ❤️ by [AmmarBN](https://github.com/AmmarrBN)
 
 ```
 
 ---
 
-Apakah kamu mau saya tambahkan satu **dropdown tambahan “🧰 API Documentation”** (buat endpoint QRIS Generator REST API kalau nanti kamu tambah backend)?
+Apakah kamu mau saya bantu **tambahkan badge MIT License & status deploy Heroku** juga di atas biar README-nya makin profesional?
 ```
