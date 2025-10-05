@@ -469,8 +469,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🙏 Acknowledgments
 
-- [v0.app](https://v0.app) - AI-powered development platform
 - [Next.js](https://nextjs.org/) - React framework
+- [Heroku](https://heroku.com/) - Deployment platform
 - [Vercel](https://vercel.com/) - Deployment platform
 - [shadcn/ui](https://ui.shadcn.com/) - UI components
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
@@ -479,12 +479,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Jika ada pertanyaan atau issue, silakan:
 - Open issue di GitHub
-- Contact via email: [your-email@example.com]
+- Contact via email: [ammarburhanudinafis.com]
 
 ---
 
 **⭐ Jika project ini membantu, jangan lupa kasih star di GitHub!**
 
 Made with ❤️ by [AmmarBN](https://github.com/AmmarrBN)
+
 
 
