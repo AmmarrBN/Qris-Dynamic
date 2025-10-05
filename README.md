@@ -106,7 +106,7 @@ Aplikasi ini dibangun menggunakan teknologi modern:
 
 ### 1. CRC16 Calculation (`components/qris-generator.tsx`)
 
-\`\`\`typescript
+```typescript
 function crc16(data: string): string {
   let crc = 0xFFFF;
   for (let i = 0; i < data.length; i++) {
@@ -122,7 +122,7 @@ function crc16(data: string): string {
   crc = crc & 0xFFFF;
   return crc.toString(16).toUpperCase().padStart(4, '0');
 }
-\`\`\`
+```
 
 **Fungsi:** Menghitung checksum CRC16-CCITT untuk validasi data QRIS.
 
@@ -134,7 +134,7 @@ function crc16(data: string): string {
 
 ### 2. QRIS Dynamic Conversion (`components/qris-generator.tsx`)
 
-\`\`\`typescript
+```typescript
 const modifyQris = (staticQris: string, nominal: number): string => {
   // Remove existing CRC (last 4 characters)
   let qrisWithoutCrc = staticQris.slice(0, -4);
@@ -154,7 +154,7 @@ const modifyQris = (staticQris: string, nominal: number): string => {
   // Return complete QRIS with new CRC
   return qrisWithoutCrc + '6304' + newCrc;
 };
-\`\`\`
+```
 
 **Fungsi:** Mengkonversi QRIS statis menjadi dinamis dengan menambahkan nominal.
 
@@ -168,7 +168,7 @@ const modifyQris = (staticQris: string, nominal: number): string => {
 
 ### 3. QR Code Generation with Logo (`components/qr-code-display.tsx`)
 
-\`\`\`typescript
+```typescript
 useEffect(() => {
   const canvas = canvasRef.current;
   if (!canvas || !qrisString) return;
@@ -199,7 +199,7 @@ useEffect(() => {
     ctx.drawImage(logo, x, y, logoSize, logoSize);
   };
 }, [qrisString]);
-\`\`\`
+```
 
 **Fungsi:** Generate QR code dengan logo di tengahnya.
 
@@ -212,14 +212,14 @@ useEffect(() => {
 
 ### 4. Theme Toggle (`components/theme-toggle.tsx`)
 
-\`\`\`typescript
+```typescript
 const toggleTheme = () => {
   const newTheme = theme === 'dark' ? 'light' : 'dark';
   setTheme(newTheme);
   localStorage.setItem('theme', newTheme);
   document.documentElement.classList.toggle('dark', newTheme === 'dark');
 };
-\`\`\`
+```
 
 **Fungsi:** Toggle antara dark mode dan light mode.
 
@@ -238,13 +238,13 @@ const toggleTheme = () => {
 ### Langkah-langkah
 
 1. **Clone repository**
-\`\`\`bash
-git clone https://github.com/Hoshiyuki-Api/v0-dynamic-qris-generator.git
-cd v0-dynamic-qris-generator
-\`\`\`
+```bash
+git clone https://github.com/AmmarrBN/Qris-Dynamic.git
+cd Qris-Dynamic
+```
 
 2. **Install dependencies**
-\`\`\`bash
+```bash
 # Menggunakan npm
 npm install
 
@@ -253,21 +253,21 @@ yarn install
 
 # Atau menggunakan pnpm
 pnpm install
-\`\`\`
+```
 
 3. **Jalankan development server**
-\`\`\`bash
+```bash
 npm run dev
 # atau
 yarn dev
 # atau
 pnpm dev
-\`\`\`
+```
 
 4. **Buka browser**
-\`\`\`
+```
 http://localhost:3000
-\`\`\`
+```
 
 ## 🚀 Deploy ke Vercel
 
@@ -276,17 +276,17 @@ Vercel adalah platform deployment yang paling mudah untuk Next.js (dibuat oleh c
 ### Method 1: Deploy via GitHub (Recommended)
 
 1. **Push code ke GitHub**
-\`\`\`bash
+```bash
 git add .
 git commit -m "Initial commit"
 git push origin main
-\`\`\`
+```
 
 2. **Import ke Vercel**
    - Buka [vercel.com](https://vercel.com)
    - Login dengan GitHub account
    - Click "Add New Project"
-   - Import repository `v0-dynamic-qris-generator`
+   - Import repository `Qris-Dynamic`
    - Click "Deploy"
 
 3. **Konfigurasi (Optional)**
@@ -303,24 +303,24 @@ git push origin main
 ### Method 2: Deploy via Vercel CLI
 
 1. **Install Vercel CLI**
-\`\`\`bash
+```bash
 npm install -g vercel
-\`\`\`
+```
 
 2. **Login ke Vercel**
-\`\`\`bash
+```bash
 vercel login
-\`\`\`
+```
 
 3. **Deploy**
-\`\`\`bash
+```bash
 vercel
-\`\`\`
+```
 
 4. **Deploy ke Production**
-\`\`\`bash
+```bash
 vercel --prod
-\`\`\`
+```
 
 ### Auto-Deploy
 Setiap push ke branch `main` akan otomatis trigger deployment baru di Vercel.
@@ -336,7 +336,7 @@ Heroku adalah platform cloud yang mendukung berbagai bahasa pemrograman.
 ### Langkah-langkah
 
 1. **Install Heroku CLI**
-\`\`\`bash
+```bash
 # macOS
 brew tap heroku/brew && brew install heroku
 
@@ -345,29 +345,29 @@ brew tap heroku/brew && brew install heroku
 
 # Linux
 curl https://cli-assets.heroku.com/install.sh | sh
-\`\`\`
+```
 
 2. **Login ke Heroku**
-\`\`\`bash
+```bash
 heroku login
-\`\`\`
+```
 
 3. **Create Heroku App**
-\`\`\`bash
+```bash
 heroku create your-app-name
 # atau biarkan Heroku generate nama random
 heroku create
-\`\`\`
+```
 
 4. **Set Buildpack**
-\`\`\`bash
+```bash
 heroku buildpacks:set heroku/nodejs
-\`\`\`
+```
 
-5. **Configure Environment**
+6. **Configure Environment**
 
 Pastikan `package.json` memiliki scripts yang benar:
-\`\`\`json
+```json
 {
   "scripts": {
     "dev": "next dev",
@@ -376,24 +376,24 @@ Pastikan `package.json` memiliki scripts yang benar:
     "lint": "next lint"
   }
 }
-\`\`\`
+```
 
 Pastikan ada file `Procfile` di root directory:
-\`\`\`
+```
 web: npm start
-\`\`\`
+```
 
 6. **Deploy ke Heroku**
-\`\`\`bash
+```bash
 git add .
 git commit -m "Deploy to Heroku"
 git push heroku main
-\`\`\`
+```
 
-7. **Open App**
-\`\`\`bash
+8. **Open App**
+```bash
 heroku open
-\`\`\`
+```
 
 ### Troubleshooting Heroku
 
@@ -412,9 +412,9 @@ heroku open
 
 Jika aplikasi memerlukan environment variables:
 
-\`\`\`bash
+```bash
 heroku config:set VARIABLE_NAME=value
-\`\`\`
+```
 
 ## 📖 Cara Penggunaan
 
@@ -465,17 +465,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🙏 Acknowledgments
 
-- [v0.app](https://v0.app) - AI-powered development platform
 - [Next.js](https://nextjs.org/) - React framework
 - [Vercel](https://vercel.com/) - Deployment platform
 - [shadcn/ui](https://ui.shadcn.com/) - UI components
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
-
-## 📞 Support
-
-Jika ada pertanyaan atau issue, silakan:
-- Open issue di GitHub
-- Contact via email: [your-email@example.com]
 
 ---
 
