@@ -11,18 +11,18 @@ Aplikasi web modern untuk mengkonversi QRIS statis menjadi QRIS dinamis dengan n
 
 ## 📋 Daftar Isi
 
-- [Apa itu QRIS Dynamic?](#apa-itu-qris-dynamic)
-- [Fitur Utama](#fitur-utama)
-- [Kegunaan](#kegunaan)
-- [Manfaat](#manfaat)
-- [Teknologi](#teknologi)
-- [Penjelasan Code Utama](#penjelasan-code-utama)
-- [Instalasi Lokal](#instalasi-lokal)
-- [Deploy ke Vercel](#deploy-ke-vercel)
-- [Deploy ke Heroku](#deploy-ke-heroku)
-- [Cara Penggunaan](#cara-penggunaan)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
+- [Apa itu QRIS Dynamic?](#-apa-itu-qris-dynamic)
+- [Fitur Utama](#-fitur-utama)
+- [Kegunaan](#-kegunaan)
+- [Manfaat](#-manfaat)
+- [Teknologi](#%EF%B8%8F-teknologi)
+- [Penjelasan Code Utama](#-penjelasan-code-utama)
+- [Instalasi Lokal](#-instalasi-lokal)
+- [Deploy ke Vercel](#-deploy-ke-vercel)
+- [Deploy ke Heroku](#-deploy-ke-heroku)
+- [Cara Penggunaan](#-cara-penggunaan)
+- [Kontribusi](#-kontribusi)
+- [Lisensi](#-lisensi)
 
 ## 🎯 Apa itu QRIS Dynamic?
 
@@ -482,3 +482,4 @@ Jika ada pertanyaan atau issue, silakan:
 **⭐ Jika project ini membantu, jangan lupa kasih star di GitHub!**
 
 Made with ❤️ by [AmmarBN](https://github.com/AmmarrBN)
+
