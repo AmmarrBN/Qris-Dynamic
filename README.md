@@ -1,13 +1,11 @@
 # QRIS Dynamic Generator 🚀
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/yukis-projects-11c0a24b/v0-dynamic-qris-generator)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/B1dAckC44gC)
 [![Next.js](https://img.shields.io/badge/Next.js-15.2.4-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.2-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 
 Aplikasi web modern untuk mengkonversi QRIS statis menjadi QRIS dinamis dengan nominal pembayaran yang dapat disesuaikan. Dilengkapi dengan dark/light mode, animasi smooth, dan logo branding otomatis pada QR code.
 
-[![QRIS Dynamic Generator Preview](https://qris.ammarbn.my.id/)][]
+[![QRIS Dynamic Generator Preview](https://raw.githubusercontent.com/AmmarrBN/Qris-Dynamic/refs/heads/main/WhatsApp%20Image%202025-10-04%20at%209.05.31%20PM%20(1).jpeg)](https://qris.ammarbn.my.id)
 
 ## 📋 Daftar Isi
 
@@ -467,6 +465,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 - [Next.js](https://nextjs.org/) - React framework
 - [Vercel](https://vercel.com/) - Deployment platform
+- [HerokuApp](https://heroku.com/) - Deployment platform
 - [shadcn/ui](https://ui.shadcn.com/) - UI components
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 
