@@ -15,7 +15,7 @@ Aplikasi web modern untuk mengkonversi QRIS statis menjadi QRIS dinamis dengan n
 - [Fitur Utama](#-fitur-utama)
 - [Kegunaan](#-kegunaan)
 - [Manfaat](#-manfaat)
-- [Teknologi](#-teknologi)
+- [Teknologi](#teknologi)
 - [Penjelasan Code Utama](#-penjelasan-code-utama)
 - [Instalasi Lokal](#-instalasi-lokal)
 - [Deploy ke Vercel](#-deploy-ke-vercel)
