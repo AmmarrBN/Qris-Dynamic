@@ -243,8 +243,8 @@ const toggleTheme = () => {
 
 1. **Clone repository**
 ```bash
-git clone https://github.com/Hoshiyuki-Api/v0-dynamic-qris-generator.git
-cd v0-dynamic-qris-generator
+git clone https://github.com/AmmarrBN/Qris-Dynamic.git
+cd Qris-Dynamic
 ```
 
 2. **Install dependencies**
@@ -290,7 +290,7 @@ git push origin main
    - Buka [vercel.com](https://vercel.com)
    - Login dengan GitHub account
    - Click "Add New Project"
-   - Import repository `v0-dynamic-qris-generator`
+   - Import repository `Qris-Dynamic`
    - Click "Deploy"
 
 3. **Konfigurasi (Optional)**
@@ -486,6 +486,7 @@ Jika ada pertanyaan atau issue, silakan:
 **⭐ Jika project ini membantu, jangan lupa kasih star di GitHub!**
 
 Made with ❤️ by [AmmarBN](https://github.com/AmmarrBN)
+
 
 
 
